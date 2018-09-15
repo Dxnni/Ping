@@ -1,25 +1,30 @@
 import { Component } from '@angular/core';
-import { IonicPage, ModalController, NavController } from 'ionic-angular';
-
+import { IonicPage, ModalController, NavController/*, NavParams*/ } from 'ionic-angular';
 import { Item } from '../../models/item';
 import { Items } from '../../providers';
+/**
+ * Generated class for the PingDetailsPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
 
 @IonicPage()
 @Component({
-  selector: 'page-list-master',
-  templateUrl: 'list-master.html'
+  selector: 'page-ping-details',
+  templateUrl: 'ping-details.html',
 })
-export class ListMasterPage {
+export class PingDetailsPage {
   currentItems: Item[];
-  createdItems: Item[];
+  //createdItems: Item[];
   
-  state: string;
+  //state: string;
   hasPing: boolean = false;
 
   constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController) {
-    this.state = 'current'
+    //this.state = 'current'
     this.currentItems = this.items.query();
-    this.createdItems = this.items.query2();
+    //this.createdItems = this.items.query2();
   }
 
   /**

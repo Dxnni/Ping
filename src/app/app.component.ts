@@ -33,19 +33,20 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   pages: any[] = [
-    { title: 'Detail', component: 'TutorialPage' },
+    { title: 'Tutorial', component: 'TutorialPage' },
     { title: 'Welcome', component: 'WelcomePage' },
     { title: 'Home', component: 'TabsPage' },
-    { title: 'History', component: 'CardsPage' },
-    { title: 'Extra', component: 'ContentPage' },
+    { title: 'Cards', component: 'CardsPage' },
+    { title: 'Blank', component: 'ContentPage' },
     { title: 'Login', component: 'LoginPage' },
     { title: 'Signup', component: 'SignupPage' },
     { title: 'Pings', component: 'ListMasterPage' },
-    { title: 'Menu', component: 'MenuPage' },
+    { title: 'SideMenu', component: 'MenuPage' },
     { title: 'Settings', component: 'SettingsPage' },
     { title: 'Search', component: 'SearchPage' },
-    { title: 'newPing', component: 'ItemCreatePage' },
-    { title: 'History', component: 'HistoryPage' }
+    { title: 'CreatePing', component: 'ItemCreatePage' },
+    { title: 'History', component: 'HistoryPage' },
+    { title: 'PingDetails', component: 'PingDetailsPage' }
   ]
 
   constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
