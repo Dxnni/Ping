@@ -44,7 +44,8 @@ export class MyApp {
     { title: 'Menu', component: 'MenuPage' },
     { title: 'Settings', component: 'SettingsPage' },
     { title: 'Search', component: 'SearchPage' },
-    { title: 'newPing', component: 'ItemCreatePage' }
+    { title: 'newPing', component: 'ItemCreatePage' },
+    { title: 'History', component: 'HistoryPage' }
   ]
 
   constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {
