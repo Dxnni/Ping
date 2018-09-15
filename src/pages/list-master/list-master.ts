@@ -11,9 +11,15 @@ import { Items } from '../../providers';
 })
 export class ListMasterPage {
   currentItems: Item[];
+  createdItems: Item[];
+  
+  state: string;
+  hasPing: boolean = false;
 
   constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController) {
+    this.state = 'current'
     this.currentItems = this.items.query();
+    this.createdItems = this.items.query2();
   }
 
   /**

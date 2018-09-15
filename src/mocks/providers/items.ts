@@ -5,55 +5,71 @@ import { Item } from '../../models/item';
 @Injectable()
 export class Items {
   items: Item[] = [];
+  items2: Item[] = [];
 
   defaultItem: any = {
-    "name": "Burt Bear",
-    "profilePic": "assets/img/speakers/bear.jpg",
-    "about": "Burt is a Bear.",
+    "name": "Ping 1324",
+        "profilePic": "assets/img/speakers/bear.jpg",
+        "numOfPingers": 43,
+        "distance" : 343,
   };
 
 
   constructor() {
     let items = [
       {
-        "name": "Burt Bear",
+        "name": "Ping 1324",
         "profilePic": "assets/img/speakers/bear.jpg",
-        "about": "Burt is a Bear."
+        "numOfPingers": 43,
+        "distance" : 343
       },
       {
-        "name": "Charlie Cheetah",
+        "name": "Ping 431",
         "profilePic": "assets/img/speakers/cheetah.jpg",
-        "about": "Charlie is a Cheetah."
-      },
+        "numOfPingers": 2565,
+        "distance" : 6542
+      },     
       {
-        "name": "Donald Duck",
+        "name": "Ping 5431",
         "profilePic": "assets/img/speakers/duck.jpg",
-        "about": "Donald is a Duck."
-      },
+        "numOfPingers": 654,
+        "distance" : 2343
+      }
+    ];
+
+    let items2 = [ 
       {
-        "name": "Eva Eagle",
+        "name": "Ping143 1",
         "profilePic": "assets/img/speakers/eagle.jpg",
-        "about": "Eva is an Eagle."
+        "numOfPingers": 7635,
+        "distance" : 87
       },
       {
-        "name": "Ellie Elephant",
+        "name": "Ping 54131",
         "profilePic": "assets/img/speakers/elephant.jpg",
-        "about": "Ellie is an Elephant."
+        "numOfPingers": 5,
+        "distance" : 2345
       },
       {
-        "name": "Molly Mouse",
+        "name": "Ping 7681",
         "profilePic": "assets/img/speakers/mouse.jpg",
-        "about": "Molly is a Mouse."
+        "numOfPingers": 5,
+        "distance" : 343
       },
       {
-        "name": "Paul Puppy",
+        "name": "Ping 8751",
         "profilePic": "assets/img/speakers/puppy.jpg",
-        "about": "Paul is a Puppy."
+        "numOfPingers": 76,
+        "distance" : 3234
       }
     ];
 
     for (let item of items) {
       this.items.push(new Item(item));
+    }
+
+    for (let item of items2) {
+      this.items2.push(new Item(item));
     }
   }
 
@@ -73,6 +89,12 @@ export class Items {
       }
       return null;
     });
+  }
+
+  query2(params?: any) {
+    if (!params) {
+      return this.items2;
+    }
   }
 
   add(item: Item) {
