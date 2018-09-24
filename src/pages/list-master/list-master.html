@@ -4,16 +4,18 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>P!NG</ion-title>
+    <div text-center>
+    <img src="../../assets/img/ping_logo_transparent.png"/>
+    </div>
 
     <ion-buttons end>
-      <button ion-button icon-only (click)="addItem()">
-        <ion-icon name="radio-button-on" *ngIf="hasPing; else elseBlock"></ion-icon>
-        <ng-template #elseBlock>
-        <ion-icon name="radio-button-off" #elseBlock></ion-icon>
-        </ng-template>
+      <button ion-button icon-only (click)="addItem()" *ngIf="hasPing; else elseBlock">
+        <ion-icon name="radio-button-on"></ion-icon>
       </button>
     </ion-buttons>
+    <ng-template #elseBlock>
+      <ion-icon name="radio-button-off"></ion-icon>
+    </ng-template>
   </ion-navbar>
 
 </ion-header>

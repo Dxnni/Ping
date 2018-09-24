@@ -46,7 +46,8 @@ export class MyApp {
     { title: 'Search', component: 'SearchPage' },
     { title: 'CreatePing', component: 'ItemCreatePage' },
     { title: 'History', component: 'HistoryPage' },
-    { title: 'PingDetails', component: 'PingDetailsPage' }
+    { title: 'PingDetails', component: 'PingDetailsPage' },
+    { title: 'Received', component: 'RecievedPage' }
   ]
 
   constructor(private translate: TranslateService, platform: Platform, settings: Settings, private config: Config, private statusBar: StatusBar, private splashScreen: SplashScreen) {

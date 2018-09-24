@@ -14,7 +14,7 @@ export class ListMasterPage {
   createdItems: Item[];
   
   state: string;
-  hasPing: boolean = false;
+  hasPing: boolean = true;
 
   constructor(public navCtrl: NavController, public items: Items, public modalCtrl: ModalController) {
     this.state = 'current'
@@ -33,7 +33,8 @@ export class ListMasterPage {
    * modal and then adds the new item to our data source if the user created one.
    */
   addItem() {
-    let addModal = this.modalCtrl.create('ItemCreatePage');
+    this.hasPing = false;
+    let addModal = this.modalCtrl.create('RecievedPage');
     addModal.onDidDismiss(item => {
       if (item) {
         this.items.add(item);
